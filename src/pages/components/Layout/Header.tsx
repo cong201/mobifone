@@ -93,178 +93,180 @@ const Header: React.FC = () => {
     setIsHovered(null);
   };
   return (
-    <div className="flex items-center justify-center">
-      <div className="flex py-[15px] items-center w-[1340px] mx-auto space-x-10">
-        <section className="flex flex-2 ">
-          <a href="/">
-            <Image
-              src="/img/Logo-Mobifone.png"
-              alt=""
-              width={210}
-              height={120}
-            />
-          </a>
-        </section>
-        <section className="flex uppercase font-medium text-blue-600 text-lg space-x-3 mt-[10px] text-[14px] flex-7">
-          <ul className="flex items-center justify-center">
-            <a className="hover:text-blue-800" href="/">
-              Trang chủ
+    <div className="fixed top-0 left-0 right-0 bg-white z-50">
+      <div className="flex items-center justify-center">
+        <div className="flex py-[40px] items-center w-[1340px] mx-auto space-x-10">
+          <section className="flex flex-2 ">
+            <a href="/">
+              <Image
+                src="/img/Logo-Mobifone.png"
+                alt=""
+                width={210}
+                height={120}
+              />
             </a>
-          </ul>
-          <ul
-            className="flex items-center justify-center relative item-2"
-            onMouseEnter={() => handleMouseEnter("item-2")}
-            onMouseLeave={handleMouseLeave}
-          >
-            <a href="" className="hover:text-blue-800">
-              Đăng kí 4G
-            </a>
-            <MdKeyboardArrowDown />
-            {isHovered === "item-2" && (
-              <div
-                className="absolute p-0 m-0 top-full left-0 float-left w-[250px] list-none border border-solid border-blue-500 rounded-lg bg-blue-500 box-border"
-                onMouseEnter={() => handleMouseEnter("item-2")}
-                onMouseLeave={handleMouseLeave}
-              >
-                {fourGs.map((item, index) => (
-                  <li className="p-[10px] pb-[10px] border-b border-solid border-gray-300">
-                    <a
-                      className="text-base font-semibold text-white hover:text-gray-200"
-                      href=""
-                    >
-                      {item.name}
-                    </a>
-                  </li>
-                ))}
-              </div>
-            )}
-          </ul>
-          <ul
-            className="flex items-center justify-center relative item-3"
-            onMouseEnter={() => handleMouseEnter("item-3")}
-            onMouseLeave={handleMouseLeave}
-          >
-            <a className="hover:text-blue-800" href="">
-              Đăng ký 3G
-            </a>{" "}
-            <MdKeyboardArrowDown />
-            {isHovered === "item-3" && (
-              <div
-                className="absolute p-0 m-0 top-full left-0 float-left w-[250px] list-none border border-solid border-blue-500 rounded-lg bg-blue-500 box-border"
-                onMouseEnter={() => handleMouseEnter("item-3")}
-                onMouseLeave={handleMouseLeave}
-              >
-                {threeGs.map((item, index) => (
-                  <li className="p-[10px] pb-[10px] border-b border-solid border-gray-300">
-                    <a
-                      className="text-base font-semibold text-white hover:text-gray-200"
-                      href=""
-                    >
-                      {item.name}
-                    </a>
-                  </li>
-                ))}
-              </div>
-            )}
-          </ul>
-          <ul
-            className="flex items-center justify-center relative item-4"
-            onMouseEnter={() => handleMouseEnter("item-4")}
-            onMouseLeave={handleMouseLeave}
-          >
-            <a className="hover:text-blue-800" href="">
-              Đăng ký 5G
-            </a>{" "}
-            <MdKeyboardArrowDown />
-            {isHovered === "item-4" && (
-              <div
-                className="absolute p-0 m-0 top-full left-0 float-left w-[250px] list-none border border-solid border-blue-500 rounded-lg bg-blue-500 box-border"
-                onMouseEnter={() => handleMouseEnter("item-4")}
-                onMouseLeave={handleMouseLeave}
-              >
-                {fiveGs.map((item, index) => (
-                  <li className="p-[10px] pb-[10px] border-b border-solid border-gray-300">
-                    <a
-                      className="text-base font-semibold text-white hover:text-gray-200"
-                      href=""
-                    >
-                      {item.name}
-                    </a>
-                  </li>
-                ))}
-              </div>
-            )}
-          </ul>
-          <ul
-            className="flex items-center justify-center relative item-5"
-            onMouseEnter={() => handleMouseEnter("item-5")}
-            onMouseLeave={handleMouseLeave}
-          >
-            <a className="hover:text-blue-800" href="">
-              Khuyến mãi
-            </a>{" "}
-            <MdKeyboardArrowDown />
-            {isHovered === "item-5" && (
-              <div
-                className="absolute p-0 m-0 top-full left-0 float-left w-[250px] list-none border border-solid border-blue-500 rounded-lg bg-blue-500 box-border"
-                onMouseEnter={() => handleMouseEnter("item-5")}
-                onMouseLeave={handleMouseLeave}
-              >
-                {vouchers.map((item, index) => (
-                  <li className="p-[10px] pb-[10px] border-b border-solid border-gray-300">
-                    <a
-                      className="text-base font-semibold text-white hover:text-gray-200"
-                      href=""
-                    >
-                      {item.name}
-                    </a>
-                  </li>
-                ))}
-              </div>
-            )}
-          </ul>
-          <ul
-            className="flex items-center justify-center relative item-6"
-            onMouseEnter={() => handleMouseEnter("item-6")}
-            onMouseLeave={handleMouseLeave}
-          >
-            <a className="hover:text-blue-800" href="">
-              Tin tức
-            </a>{" "}
-            <MdKeyboardArrowDown />
-            {isHovered === "item-6" && (
-              <div
-                className="absolute p-0 m-0 top-full left-0 float-left w-[250px] list-none border border-solid border-blue-500 rounded-lg bg-blue-500 box-border"
-                onMouseEnter={() => handleMouseEnter("item-6")}
-                onMouseLeave={handleMouseLeave}
-              >
-                {news.map((item, index) => (
-                  <li className="p-[10px] pb-[10px] border-b border-solid border-gray-300">
-                    <a
-                      className="text-base font-semibold text-white hover:text-gray-200"
-                      href=""
-                    >
-                      {item.name}
-                    </a>
-                  </li>
-                ))}
-              </div>
-            )}
-          </ul>
-          <ul className="flex items-center justify-center">
-            <a className="hover:text-blue-800" href="">
-              Liên hệ
-            </a>
-          </ul>
-          <ul className="flex items-center justify-center">
-            <a className="hover:text-blue-800" href="">
-              Giới thiệu
-            </a>
-          </ul>
-        </section>
-        <section className="flex items-center justify-center border border-gray bg-gray-100 rounded-lg w-[80px] h-9 hover:bg-gray-300 cursor-pointer border-none flex-1">
-          <CiSearch className="text-3xl flex items-center justify-center font-bold" />
-        </section>
+          </section>
+          <section className="flex uppercase font-medium text-blue-600 text-lg space-x-3 mt-[10px] text-[14px] flex-7">
+            <ul className="flex items-center justify-center">
+              <a className="hover:text-blue-800" href="/">
+                Trang chủ
+              </a>
+            </ul>
+            <ul
+              className="flex items-center justify-center relative item-2"
+              onMouseEnter={() => handleMouseEnter("item-2")}
+              onMouseLeave={handleMouseLeave}
+            >
+              <a href="" className="hover:text-blue-800">
+                Đăng kí 4G
+              </a>
+              <MdKeyboardArrowDown />
+              {isHovered === "item-2" && (
+                <div
+                  className="absolute p-0 m-0 top-full left-0 float-left w-[250px] list-none border border-solid border-blue-500 rounded-lg bg-blue-500 box-border"
+                  onMouseEnter={() => handleMouseEnter("item-2")}
+                  onMouseLeave={handleMouseLeave}
+                >
+                  {fourGs.map((item, index) => (
+                    <li className="p-[10px] pb-[10px] border-b border-solid border-gray-300">
+                      <a
+                        className="text-base font-semibold text-white hover:text-gray-200"
+                        href=""
+                      >
+                        {item.name}
+                      </a>
+                    </li>
+                  ))}
+                </div>
+              )}
+            </ul>
+            <ul
+              className="flex items-center justify-center relative item-3"
+              onMouseEnter={() => handleMouseEnter("item-3")}
+              onMouseLeave={handleMouseLeave}
+            >
+              <a className="hover:text-blue-800" href="">
+                Đăng ký 3G
+              </a>{" "}
+              <MdKeyboardArrowDown />
+              {isHovered === "item-3" && (
+                <div
+                  className="absolute p-0 m-0 top-full left-0 float-left w-[250px] list-none border border-solid border-blue-500 rounded-lg bg-blue-500 box-border"
+                  onMouseEnter={() => handleMouseEnter("item-3")}
+                  onMouseLeave={handleMouseLeave}
+                >
+                  {threeGs.map((item, index) => (
+                    <li className="p-[10px] pb-[10px] border-b border-solid border-gray-300">
+                      <a
+                        className="text-base font-semibold text-white hover:text-gray-200"
+                        href=""
+                      >
+                        {item.name}
+                      </a>
+                    </li>
+                  ))}
+                </div>
+              )}
+            </ul>
+            <ul
+              className="flex items-center justify-center relative item-4"
+              onMouseEnter={() => handleMouseEnter("item-4")}
+              onMouseLeave={handleMouseLeave}
+            >
+              <a className="hover:text-blue-800" href="">
+                Đăng ký 5G
+              </a>{" "}
+              <MdKeyboardArrowDown />
+              {isHovered === "item-4" && (
+                <div
+                  className="absolute p-0 m-0 top-full left-0 float-left w-[250px] list-none border border-solid border-blue-500 rounded-lg bg-blue-500 box-border"
+                  onMouseEnter={() => handleMouseEnter("item-4")}
+                  onMouseLeave={handleMouseLeave}
+                >
+                  {fiveGs.map((item, index) => (
+                    <li className="p-[10px] pb-[10px] border-b border-solid border-gray-300">
+                      <a
+                        className="text-base font-semibold text-white hover:text-gray-200"
+                        href=""
+                      >
+                        {item.name}
+                      </a>
+                    </li>
+                  ))}
+                </div>
+              )}
+            </ul>
+            <ul
+              className="flex items-center justify-center relative item-5"
+              onMouseEnter={() => handleMouseEnter("item-5")}
+              onMouseLeave={handleMouseLeave}
+            >
+              <a className="hover:text-blue-800" href="">
+                Khuyến mãi
+              </a>{" "}
+              <MdKeyboardArrowDown />
+              {isHovered === "item-5" && (
+                <div
+                  className="absolute p-0 m-0 top-full left-0 float-left w-[250px] list-none border border-solid border-blue-500 rounded-lg bg-blue-500 box-border"
+                  onMouseEnter={() => handleMouseEnter("item-5")}
+                  onMouseLeave={handleMouseLeave}
+                >
+                  {vouchers.map((item, index) => (
+                    <li className="p-[10px] pb-[10px] border-b border-solid border-gray-300">
+                      <a
+                        className="text-base font-semibold text-white hover:text-gray-200"
+                        href=""
+                      >
+                        {item.name}
+                      </a>
+                    </li>
+                  ))}
+                </div>
+              )}
+            </ul>
+            <ul
+              className="flex items-center justify-center relative item-6"
+              onMouseEnter={() => handleMouseEnter("item-6")}
+              onMouseLeave={handleMouseLeave}
+            >
+              <a className="hover:text-blue-800" href="">
+                Tin tức
+              </a>{" "}
+              <MdKeyboardArrowDown />
+              {isHovered === "item-6" && (
+                <div
+                  className="absolute p-0 m-0 top-full left-0 float-left w-[250px] list-none border border-solid border-blue-500 rounded-lg bg-blue-500 box-border"
+                  onMouseEnter={() => handleMouseEnter("item-6")}
+                  onMouseLeave={handleMouseLeave}
+                >
+                  {news.map((item, index) => (
+                    <li className="p-[10px] pb-[10px] border-b border-solid border-gray-300">
+                      <a
+                        className="text-base font-semibold text-white hover:text-gray-200"
+                        href=""
+                      >
+                        {item.name}
+                      </a>
+                    </li>
+                  ))}
+                </div>
+              )}
+            </ul>
+            <ul className="flex items-center justify-center">
+              <a className="hover:text-blue-800" href="">
+                Liên hệ
+              </a>
+            </ul>
+            <ul className="flex items-center justify-center">
+              <a className="hover:text-blue-800" href="">
+                Giới thiệu
+              </a>
+            </ul>
+          </section>
+          <section className="flex items-center justify-center border border-gray bg-gray-100 rounded-lg w-[80px] h-9 hover:bg-gray-300 cursor-pointer border-none flex-1">
+            <CiSearch className="text-3xl flex items-center justify-center font-bold" />
+          </section>
+        </div>
       </div>
     </div>
   );

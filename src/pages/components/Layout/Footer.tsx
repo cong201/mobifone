@@ -34,7 +34,7 @@ const Footer: React.FC = () => {
   };
   return (
     <div className="flex items-center justify-center">
-      <div className="flex space-x-10 w-[1340px] mx-auto">
+      <div className="flex space-x-10 w-[1340px] mx-auto py-[30px]">
         <section className="flex flex-col flex-1">
           <h1 className="text-[22px] font-medium text-blue-800 uppercase">
             Thông tin liên hệ
@@ -69,7 +69,7 @@ const Footer: React.FC = () => {
             {fourGs.map((item, index) => (
               <li
                 key={index}
-                className={`flex items-center text-blue-800 hover:text-black hover:cursor-pointer ${
+                className={`flex items-center mt-[10px] text-blue-800 hover:text-black hover:cursor-pointer space-x-2 hover:space-x-2${
                   hoveredItem === index ? "hovered" : ""
                 }`}
                 onMouseEnter={() => handleMouseEnter(index)}
@@ -89,7 +89,7 @@ const Footer: React.FC = () => {
             {fourGs.map((item, index) => (
               <li
                 key={index}
-                className={`flex items-center text-blue-800 hover:text-black hover:cursor-pointer ${
+                className={`flex items-center mt-[10px] text-blue-800 hover:text-black hover:cursor-pointer space-x-2 hover:space-x-2${
                   hoveredItem === index ? "hovered" : ""
                 }`}
                 onMouseEnter={() => handleMouseEnter(index)}
@@ -109,7 +109,7 @@ const Footer: React.FC = () => {
             {fourGs.map((item, index) => (
               <li
                 key={index}
-                className={`flex items-center text-blue-800 hover:text-black hover:cursor-pointer ${
+                className={`flex items-center mt-[10px] text-blue-800 hover:text-black hover:cursor-pointer space-x-2 hover:space-x-2 ${
                   hoveredItem === index ? "hovered" : ""
                 }`}
                 onMouseEnter={() => handleMouseEnter(index)}
